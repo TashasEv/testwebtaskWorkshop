@@ -1,10 +1,3 @@
-"use latest"
-import util from "util";
-module.exports = function(ctx, cb) {
-  console.log(util.inspect(ctx.body, {depth:null}));
-  cb();
-};
-
 module.exports = function(ctx, cb) {
   var slack = require("slack-notify")(ctx.secrets.SLACK_URL);
   var body = ctx.body;
